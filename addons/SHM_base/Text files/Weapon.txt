@@ -1,0 +1,18 @@
+Weapon (Resource):
+	Variables:
+		All games:
+			weapon_name : String = "No_name"
+			weapon_id : int = 0
+			max_ammo : int = 0
+			ammo_per_shot : int = 0
+			projectile_ids : Array[int]
+			min_amount_of_markers : int
+		SH2R:
+			weapon_type : GlobalEnum.WeaponTypes
+			change_scale : bool = true
+			distance : int = 700
+			use_unique_markers : bool = false
+			send_signals : bool = false
+	Functions:
+		use_weapon(markers:Array[Marker2D],direction:float,type:GlobalEnum.BodyTypes) -> void
+		set_projectile(projectile:Projectile,marker:Marker2D,direction:float,type:GlobalEnum.BodyTypes) -> void

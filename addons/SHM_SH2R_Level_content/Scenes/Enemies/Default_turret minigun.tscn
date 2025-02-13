@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://mhtufbhlm57h"]
+
+[ext_resource type="Texture2D" uid="uid://yis7lwmisu71" path="res://addons/SHM_SH2R_Level_content/Textures/Enemies/Default_turret minigun.png" id="1_idyeh"]
+
+[node name="Default_turret_minigun" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_idyeh")

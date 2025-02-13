@@ -1,0 +1,9 @@
+Projectie:
+	Important variables:
+		id : int
+		atk : int
+		speed : Vector2
+		life_time : float
+		activated : bool = true
+		has_particle : bool = true
+		particle_color : Color = Color.WHITE (experimental)

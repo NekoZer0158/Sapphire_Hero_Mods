@@ -1,0 +1,20 @@
+Weapon IDs (Only those, that work with player):
+	Main:
+		2   - Player's main weapon
+		25  - Player's upgraded weapon
+		32  - Sniper laser (epilogue weapon)
+	Secondary:
+		30  - Shotgun blue
+		31  - Shotgun pink
+		35  - Machine gun  (weapon from Fliegend level)
+		36  - Laser platform
+		205 - Freeze weapon
+		400 - Gear weapon
+	Boss:
+		4   - Unknown
+		75  - Pamyat'
+		90  - Smelost'
+		100 - Kalt
+		101 - Fliegend
+		106 - Feurig
+		107 - Knochen

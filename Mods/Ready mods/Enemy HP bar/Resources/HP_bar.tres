@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://djycdcen6x8h7"]
+
+[ext_resource type="Texture2D" uid="uid://bnovuk8c1qe8y" path="res://Mods/Ready mods/Enemy HP bar/Textures/progress.png" id="1_tvs5t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tardk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0j8g3"]
+texture = ExtResource("1_tvs5t")
+axis_stretch_horizontal = 1
+
+[resource]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_tardk")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_0j8g3")

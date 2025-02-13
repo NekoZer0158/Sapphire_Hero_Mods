@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://djduh0ssuahi5"]
+
+[ext_resource type="Texture2D" uid="uid://5jst8u6jw6bu" path="res://addons/SHM_SHR_Level_content/Textures/Enemies/Turret_three_shot.png" id="1_2vyos"]
+
+[node name="TurretThreeShot" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_2vyos")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhkjokxq1t30h"]
+
+[ext_resource type="Texture2D" uid="uid://da1f3f0tp7qns" path="res://addons/SHM_SHR_Level_content/Textures/Enemies/Soldiers/GMR-29.png" id="1_7qh0g"]
+
+[node name="GMR-29_soldier" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+texture = ExtResource("1_7qh0g")

@@ -1,0 +1,10 @@
+GlobalEnum.BodyTypes:
+	0 - PLAYER
+	1 - COMRADE
+	2 - ENEMY
+	3 - OBJECT (SH2R)
+
+GlobalEnum.WeaponTypes: (SH2R)
+	0 - DEFAULT
+	1 - SECONDARY
+	2 - BOSS

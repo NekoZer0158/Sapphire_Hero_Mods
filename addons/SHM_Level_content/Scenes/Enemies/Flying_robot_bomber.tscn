@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnc4i4nm5t8vi"]
+
+[ext_resource type="Texture2D" uid="uid://bt7uikle7wlwi" path="res://addons/SHM_Level_content/Textures/Enemies/Flying_robot_bomber.png" id="1_o0vgx"]
+
+[node name="Flying_robot_bomber" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+editor_description = "Frame doesn't change turrets texture, it's just showing default turret textures from both games"
+texture = ExtResource("1_o0vgx")
+hframes = 2

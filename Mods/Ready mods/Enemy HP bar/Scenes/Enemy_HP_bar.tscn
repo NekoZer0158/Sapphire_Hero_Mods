@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://csutkhponh231"]
+
+[ext_resource type="Script" path="res://Mods/Ready mods/Enemy HP bar/Scripts/enemy_hp_bar.gd" id="1_fii0b"]
+[ext_resource type="Theme" uid="uid://djycdcen6x8h7" path="res://Mods/Ready mods/Enemy HP bar/Resources/HP_bar.tres" id="1_jhty1"]
+
+[node name="EnemyHpBar" type="Node2D"]
+z_index = 100
+script = ExtResource("1_fii0b")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+self_modulate = Color(0.74, 0.74, 0.74, 1)
+offset_left = -64.0
+offset_top = -30.0
+offset_right = 64.0
+offset_bottom = -20.0
+theme = ExtResource("1_jhty1")
+max_value = 16.0
+step = 1.0
+value = 16.0
+show_percentage = false

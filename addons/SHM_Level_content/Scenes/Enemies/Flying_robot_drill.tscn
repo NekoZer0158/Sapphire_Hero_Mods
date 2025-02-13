@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4r1i37588sjw"]
+
+[ext_resource type="Texture2D" uid="uid://0qehkf51y1en" path="res://addons/SHM_Level_content/Textures/Enemies/Flying_robot_drill.png" id="1_bp7rm"]
+
+[node name="Flying_robot_drill" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+editor_description = "Frame doesn't change turrets texture, it's just showing default turret textures from both games"
+texture = ExtResource("1_bp7rm")
+hframes = 2

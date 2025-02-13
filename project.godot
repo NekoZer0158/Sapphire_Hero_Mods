@@ -1,0 +1,156 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Sapphire Hero Mods"
+config/tags=PackedStringArray("плагины")
+run/main_scene="res://addons/sapphire_hero_mods/Scenes/UI/Mods_UI.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalMods="*res://addons/sapphire_hero_mods/Scripts/Singletons/GlobalMods.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/SHM_Dilogy_Level_content/plugin.cfg", "res://addons/SHM_Level_content/plugin.cfg", "res://addons/SHM_SH2R/plugin.cfg", "res://addons/SHM_SH2R_Level_content/plugin.cfg", "res://addons/SHM_SHR/plugin.cfg", "res://addons/SHM_SHR_Level_content/plugin.cfg", "res://addons/SHM_base/plugin.cfg", "res://addons/sapphire_hero_mods/plugin.cfg", "res://addons/shm_sh2r_level_content/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Fonts/": "gray",
+"res://Mods/": "teal",
+"res://Mods/Levels/SHR Template level/Resources/": "orange",
+"res://Mods/Levels/SHR Template level/Textures/": "blue",
+"res://Mods/Levels/Template level/Resources/": "orange",
+"res://Mods/Levels/Template level/Textures/": "blue",
+"res://Mods/Ready mods/Enemy HP bar/Resources/": "orange",
+"res://Mods/Ready mods/Enemy HP bar/Scenes/": "red",
+"res://Mods/Ready mods/Enemy HP bar/Scripts/": "yellow",
+"res://Mods/Ready mods/Enemy HP bar/Textures/": "blue",
+"res://Mods/Ready mods/Every enemy soldier is BMR/BMR/": "orange",
+"res://addons/": "pink",
+"res://addons/SHM_Dilogy_Level_content/Scenes/": "red",
+"res://addons/SHM_Dilogy_Level_content/Scripts/": "yellow",
+"res://addons/SHM_Dilogy_Level_content/Textures/": "blue",
+"res://addons/SHM_Level_content/Scenes/": "red",
+"res://addons/SHM_Level_content/Scripts/": "yellow",
+"res://addons/SHM_Level_content/Textures/": "blue",
+"res://addons/SHM_SH2R/Scripts/": "yellow",
+"res://addons/SHM_SH2R/Text files/": "gray",
+"res://addons/SHM_SH2R_Level_content/Scenes/": "red",
+"res://addons/SHM_SH2R_Level_content/Scripts/": "yellow",
+"res://addons/SHM_SH2R_Level_content/Textures/": "blue",
+"res://addons/SHM_SHR/Scripts/": "yellow",
+"res://addons/SHM_SHR_Level_content/Scenes/": "red",
+"res://addons/SHM_SHR_Level_content/Scripts/": "yellow",
+"res://addons/SHM_SHR_Level_content/Textures/": "blue",
+"res://addons/SHM_base/Scripts/": "yellow",
+"res://addons/SHM_base/Text files/": "gray",
+"res://addons/sapphire_hero_mods/Fonts/": "gray",
+"res://addons/sapphire_hero_mods/Resources/": "orange",
+"res://addons/sapphire_hero_mods/Scenes/": "red",
+"res://addons/sapphire_hero_mods/Scripts/": "yellow",
+"res://addons/sapphire_hero_mods/Sprites/": "blue"
+}
+
+[gui]
+
+theme/custom_font="res://Fonts/PublicPixel.ttf"
+
+[input]
+
+Menu_Left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Menu_Right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Menu_Up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Menu_Down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Previous_weapon={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
+Next_weapon={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+Show_hide_controls={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
+]
+}
+Menu_Activate={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":72,"key_label":0,"unicode":104,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"key_label":0,"unicode":106,"location":0,"echo":false,"script":null)
+]
+}
+Back={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Anything"
+2d_physics/layer_2="Robot_body"
+2d_physics/layer_3="Projectile"
+2d_physics/layer_4="TileMapLayers"
+2d_physics/layer_5="Attacking_areas"
+2d_physics/layer_6="Explosion"
+2d_physics/layer_7="Objects"
+2d_physics/layer_8="Clouds"
+2d_physics/layer_9="Shootemup_projectile"
+2d_physics/layer_10="Shootemup_plane"
+2d_physics/layer_11="Shootemup_tiles"
+2d_physics/layer_12="Shootemup_hit_area"
+2d_physics/layer_13="Background_object"
+2d_physics/layer_14="Energy_box (SH2R)"
+2d_physics/layer_15="Final_boss_only (SH2R)"
+2d_physics/layer_16="Door_stuck (SH2R)"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

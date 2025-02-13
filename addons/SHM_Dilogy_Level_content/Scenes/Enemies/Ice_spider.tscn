@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxgo2648uk658"]
+
+[ext_resource type="Texture2D" uid="uid://cmcemnjjkuow0" path="res://addons/SHM_Dilogy_Level_content/Textures/Enemies/Ice_spider.png" id="1_aeg81"]
+
+[node name="Ice_spider" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 16)
+texture = ExtResource("1_aeg81")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt7m8gtllk4ie"]
+
+[ext_resource type="Script" path="res://Mods/Ready mods/Enemy HP bar/Main_script.gd" id="1_57lmx"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_57lmx")

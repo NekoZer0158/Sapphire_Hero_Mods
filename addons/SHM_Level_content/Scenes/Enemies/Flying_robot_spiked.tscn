@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://odjfsnb0auxo"]
+
+[ext_resource type="Texture2D" uid="uid://cr543grtegy2" path="res://addons/SHM_Level_content/Textures/Enemies/Flying_robot_spiked.png" id="1_63vcl"]
+
+[node name="Flying_robot_spiked" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+editor_description = "Frame doesn't change turrets texture, it's just showing default turret textures from both games"
+texture = ExtResource("1_63vcl")
+hframes = 2

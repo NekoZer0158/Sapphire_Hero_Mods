@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2gnqijjwph6k"]
+
+[ext_resource type="Script" path="res://Mods/Ready mods/Template/Main.gd" id="1_cdcmv"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_cdcmv")

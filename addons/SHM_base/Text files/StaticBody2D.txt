@@ -1,0 +1,10 @@
+Static_Robot_body
+	Important variables (Default turret variables)
+		hp    : int = 3
+		def   : int = 0
+		reload_time : float = 1.3
+		type : GlobalEnum.BodyTypes
+	Signals:
+		got_hit(new_hp:int)
+		reload_ended()
+		now_dead()

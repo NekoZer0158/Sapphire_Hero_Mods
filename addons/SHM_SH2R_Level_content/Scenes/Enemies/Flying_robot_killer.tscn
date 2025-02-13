@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cshykoi6orja5"]
+
+[ext_resource type="Texture2D" uid="uid://bvu6hcl8bxbgh" path="res://addons/SHM_SH2R_Level_content/Textures/Enemies/Flying_robot_killer.png" id="1_e80ee"]
+
+[node name="Flying_robot_killer" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_e80ee")

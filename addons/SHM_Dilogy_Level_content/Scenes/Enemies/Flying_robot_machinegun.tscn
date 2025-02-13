@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bircx41ykxmk7"]
+
+[ext_resource type="Texture2D" uid="uid://cme81yux51de7" path="res://addons/SHM_Dilogy_Level_content/Textures/Enemies/Flying_robot_machinegun.png" id="1_mvdvn"]
+
+[node name="Flying_robot_machinegun" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mvdvn")
+hframes = 2

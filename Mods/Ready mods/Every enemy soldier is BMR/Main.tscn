@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddpsay3oao537"]
+
+[ext_resource type="Script" path="res://Mods/Ready mods/Every enemy soldier is BMR/Main.gd" id="1_56n7u"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_56n7u")

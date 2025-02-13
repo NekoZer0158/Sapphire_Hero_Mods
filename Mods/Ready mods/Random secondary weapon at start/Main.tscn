@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c27tycihr6ubt"]
+
+[ext_resource type="Script" path="res://Mods/Ready mods/Random secondary weapon at start/Main.gd" id="1_pxih7"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_pxih7")

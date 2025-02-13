@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx5fb6xyy65rc"]
+
+[ext_resource type="Texture2D" uid="uid://xbdqehil8vyo" path="res://addons/SHM_SH2R_Level_content/Textures/Enemies/Soldiers/NMR-05.png" id="1_2500j"]
+
+[node name="NMR-05_soldier" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+texture = ExtResource("1_2500j")

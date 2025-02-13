@@ -1,0 +1,16 @@
+1  - Anything
+2  - Robot_body
+3  - Projectile
+4  - TileMapLayers
+5  - Attacking_areas
+6  - Explosion
+7  - Objects
+8  - Clouds
+9  - Shootemup_projectile
+10 - Shootemup_plane
+11 - Shootemup_tiles
+12 - Shootemup_hit_area
+13 - Background_object
+14 - Energy_box           (SH2R)
+15 - Final_boss_only      (SH2R)
+16 - Door_stuck           (SH2R)

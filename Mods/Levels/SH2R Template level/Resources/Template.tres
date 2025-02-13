@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://div4a0734emv2"]
+
+[ext_resource type="Texture2D" uid="uid://bhqclck8m5nms" path="res://Mods/Levels/Template level/Textures/test.png" id="1_bu60i"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rjla"]
+texture = ExtResource("1_bu60i")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[resource]
+physics_layer_0/collision_layer = 8
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_8rjla")

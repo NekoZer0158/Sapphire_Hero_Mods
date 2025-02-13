@@ -1,0 +1,42 @@
+Robot_body
+	Important variables (Default player variables)
+		Main:
+			hp    : int = 15
+			max_hp : int = 15 
+			def   : int = 0
+			speed : int = 350 (Default), 375 (Upgrade) 
+			reload_time : float = 0.4 (Default), 0.35 (Upgrade)  
+			type : GlobalEnum.BodyTypes
+		Some other:
+			immortal : bool = false                   
+			infinite_ammo : bool = false       
+			has_death_effect : bool = true
+			mirror_sprite : bool = true (if false, character will not be mirrored when moving in the opposite direction)
+	Important functions:
+		hit(dmg : int) -> void
+		death() -> void
+		activate_immortality_frames() -> void
+	Signals:
+		got_hit(new_hp:int)
+		use_weapon(new_amount_of_ammo:int)
+		ammo_changed(new_amount_of_ammo:int)
+		hp_refill_change(new_hp_refill:int)
+		weapon_changed(new_weapon:Weapon,ammo_for_weapon:int)
+		now_dead()
+
+Moving_body (parent - Robot_body)
+	Important variables (Default player variables)
+		jump_velocity : float = -900
+		max_amount_of_jumps : int = 2
+		sliding : bool = false
+		inertia : bool = true
+	Speed:
+		speed_increase_on_floor : float = 50 (default for every moving body (SHR)), speed/7 (SH2R)
+		speed_increase_in_air   : float = 3  (default for every moving body (SHR)), speed/10 (SH2R)
+		speed_decrease_on_floor : float = 37 (default for every moving body (SHR)), speed/9 (SH2R)
+		speed_decrease_in_air   : float = 6  (default for every moving body (SHR)), speed/48 (SH2R)
+		speed_walking_backwards : float = speed*0.6 (SH2R)
+
+Flying_body (parent - Robot_body)
+	speed_increase_in_air : float = 50 (default for every flying body (SHR)), speed/6 (SH2R)
+	speed_decrease_in_air : float = 37 (default for every flying body (SHR)), speed/8 (SH2R)
