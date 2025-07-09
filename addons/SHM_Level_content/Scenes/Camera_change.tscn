@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ma8wdkbeked8"]
+
+[ext_resource type="Script" uid="uid://ckb7to67ri66l" path="res://addons/SHM_Level_content/Scripts/Camera_change.gd" id="1_r4wt3"]
+
+[node name="CameraChange" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_r4wt3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

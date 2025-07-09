@@ -27,8 +27,30 @@ static func get_level(tree:SceneTree) -> Node2D:
 	push_error("No level was found")
 	return null
 
+## Returns a dictionary
+## name: game name
+## part: the part of the game (from 1 to 4) 
+## version: game version
+## minigame: minigame type from the game (for example,"planes" from SHR and SH2R)
+static func get_game_info(tree:SceneTree) -> Dictionary:
+	return tree.get_nodes_in_group("GlobalSapphire").back().get_game_info()
+
+## For variables look up "Objects.txt" in folder "Text files"
+static func get_all_computers(tree:SceneTree) -> Array[Node]:
+	return tree.get_nodes_in_group("Computers")
+
+## For variables look up "Objects.txt" in folder "Text files"
 static func get_all_doors(tree:SceneTree) -> Array[Node]:
 	return tree.get_nodes_in_group("Doors")
+
+## Body is Robot_body or Static_Robot_body
+static func add_node_to_a_body(key:Variant,node:Node,body:PhysicsBody2D) -> void:
+	body.add_child(node)
+	body.mod_nodes_and_resources[key] = node
+
+## Body is Robot_body or Static_Robot_body
+static func add_resource_to_a_body(key:Variant,resource:Resource,body:PhysicsBody2D) -> void:
+	body.mod_nodes_and_resources[key] = resource
 
 static func change_door_textures(door:Node2D,door_top_and_bottom_texture:Texture2D,door_center_texture:Texture2D) -> void:
 	if is_instance_valid(door):

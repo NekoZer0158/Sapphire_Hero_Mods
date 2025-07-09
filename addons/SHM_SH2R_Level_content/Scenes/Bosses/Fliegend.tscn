@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://2qfqp3odafeb"]
+
+[ext_resource type="Script" uid="uid://daww0yjkc7m7o" path="res://addons/SHM_Level_content/Scripts/Boss.gd" id="1_3h3ly"]
+[ext_resource type="Texture2D" uid="uid://dah6lr0kd5nni" path="res://addons/SHM_SH2R_Level_content/Textures/Bosses/Fliegend.png" id="2_a25lq"]
+
+[node name="Fliegend" type="Marker2D"]
+script = ExtResource("1_3h3ly")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+texture = ExtResource("2_a25lq")

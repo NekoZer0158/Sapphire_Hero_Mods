@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c74c3ldeo64il"]
+
+[ext_resource type="Texture2D" uid="uid://kvuqdh6dmka" path="res://addons/SHM_Level_content/Textures/Objects/Teleport.png" id="1_ug5gu"]
+[ext_resource type="Script" uid="uid://cnlj3ctof4lq" path="res://addons/SHM_Level_content/Scripts/Teleport.gd" id="1_x4jfo"]
+
+[node name="Teleport" type="Marker2D"]
+script = ExtResource("1_x4jfo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_ug5gu")

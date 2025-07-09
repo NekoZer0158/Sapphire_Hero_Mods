@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bglc3ovylx502"]
+
+[ext_resource type="Script" uid="uid://cblh3kgfvbr1t" path="res://addons/SHM_Level_content/Scripts/Boss_activation.gd" id="1_hkegn"]
+
+[node name="BossActivation" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_hkegn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

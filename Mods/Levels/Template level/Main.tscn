@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://2gnqijjwph6k"]
+[gd_scene load_steps=13 format=4 uid="uid://2gnqijjwph6k"]
 
-[ext_resource type="Script" path="res://addons/SHM_Level_content/Scripts/Level_settings.gd" id="1_l7wqb"]
+[ext_resource type="Script" uid="uid://bwdavus85krm4" path="res://addons/SHM_Level_content/Scripts/Level_settings.gd" id="1_l7wqb"]
 [ext_resource type="TileSet" uid="uid://dycauc1rbc64y" path="res://Mods/Levels/Template level/Resources/Template.tres" id="2_7p3te"]
 [ext_resource type="PackedScene" uid="uid://dnycsio5opxnd" path="res://addons/SHM_Level_content/Scenes/Door.tscn" id="2_srl7x"]
 [ext_resource type="PackedScene" uid="uid://8ksty6mac2s1" path="res://addons/SHM_Level_content/Scenes/Level_end.tscn" id="3_cj4k5"]
@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://odjfsnb0auxo" path="res://addons/SHM_Level_content/Scenes/Enemies/Flying_robot_spiked.tscn" id="5_ec0op"]
 [ext_resource type="PackedScene" uid="uid://cnc4i4nm5t8vi" path="res://addons/SHM_Level_content/Scenes/Enemies/Flying_robot_bomber.tscn" id="6_iaf5c"]
 [ext_resource type="PackedScene" uid="uid://ce8tow3ag33hw" path="res://addons/SHM_Level_content/Scenes/Enemies/Flying_robot_ground_hit.tscn" id="6_oxe2k"]
+[ext_resource type="PackedScene" uid="uid://dqooy1nsblfw4" path="res://addons/SHM_Level_content/Scenes/Computer.tscn" id="8_y6ptt"]
+[ext_resource type="PackedScene" uid="uid://c74c3ldeo64il" path="res://addons/SHM_Level_content/Scenes/Teleport.tscn" id="9_hnbtc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnbtc"]
+size = Vector2(16, 128)
 
 [node name="Main" type="Node2D" groups=["Levels"]]
 scale = Vector2(4, 4)
@@ -23,7 +28,7 @@ end_level_transition_time = 2.0
 position = Vector2(144, 256)
 
 [node name="Player_marker2" type="Marker2D" parent="Checkpoints"]
-position = Vector2(192, 128)
+position = Vector2(176, 128)
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -37,7 +42,7 @@ position = Vector2(64, 60)
 position = Vector2(320, 26)
 
 [node name="Flying_robot_spiked" parent="Enemies" instance=ExtResource("5_ec0op")]
-position = Vector2(432, 160)
+position = Vector2(448, 176)
 
 [node name="Flying_robot_ground_hit" parent="Enemies" instance=ExtResource("6_oxe2k")]
 position = Vector2(560, 80)
@@ -49,10 +54,37 @@ position = Vector2(560, 80)
 [node name="Door" parent="Objects/Doors" instance=ExtResource("2_srl7x")]
 position = Vector2(264, 256)
 
+[node name="Door2" parent="Objects/Doors" instance=ExtResource("2_srl7x")]
+position = Vector2(296, 128)
+id = 2
+can_door_open = false
+
+[node name="Computers" type="Node2D" parent="Objects"]
+
+[node name="Computer" parent="Objects/Computers" instance=ExtResource("8_y6ptt")]
+position = Vector2(224, 128)
+enemy_positions = Array[int]([0, 1, 0, 2, 0, 3, 0, 0])
+open_this_door_id = 2
+
+[node name="Teleports" type="Node2D" parent="Objects"]
+
+[node name="Teleport" parent="Objects/Teleports" instance=ExtResource("9_hnbtc")]
+position = Vector2(192, 256)
+id = 1
+other_teleport_id = 2
+
+[node name="Teleport2" parent="Objects/Teleports" instance=ExtResource("9_hnbtc")]
+position = Vector2(128, 128)
+id = 2
+other_teleport_id = 1
+
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="LevelEnd" parent="Areas" instance=ExtResource("3_cj4k5")]
 position = Vector2(600, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/LevelEnd"]
+shape = SubResource("RectangleShape2D_hnbtc")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = 5

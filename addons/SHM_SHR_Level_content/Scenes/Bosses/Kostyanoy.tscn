@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://k52prlsreydx"]
+
+[ext_resource type="Script" uid="uid://daww0yjkc7m7o" path="res://addons/SHM_Level_content/Scripts/Boss.gd" id="1_4qtil"]
+[ext_resource type="Texture2D" uid="uid://di7f8a088qji0" path="res://addons/SHM_SHR_Level_content/Textures/Bosses/Kostyanoy.png" id="1_iim1a"]
+
+[node name="Kostyanoy" type="Marker2D"]
+script = ExtResource("1_4qtil")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+texture = ExtResource("1_iim1a")

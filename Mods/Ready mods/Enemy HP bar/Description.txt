@@ -1,1 +1,2 @@
+Enemy HP bar
 This mod adds hp bars over enemies

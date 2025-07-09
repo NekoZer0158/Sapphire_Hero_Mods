@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnycsio5opxnd"]
 
 [ext_resource type="Texture2D" uid="uid://chadp58whmtrt" path="res://addons/SHM_Level_content/Textures/Objects/Door.png" id="1_bufpl"]
-[ext_resource type="Script" path="res://addons/SHM_Level_content/Scripts/Door.gd" id="1_xi6tc"]
+[ext_resource type="Script" uid="uid://dkp5l2fsm7dxu" path="res://addons/SHM_Level_content/Scripts/Door.gd" id="1_xi6tc"]
 
 [node name="Door" type="Marker2D"]
 script = ExtResource("1_xi6tc")

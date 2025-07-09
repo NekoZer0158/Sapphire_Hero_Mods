@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlnc8fijsg26q"
-path="res://.godot/imported/Flying_robot_sleep.png-c170e60bc203a52a847fa9006c4936d7.ctex"
+uid="uid://kvuqdh6dmka"
+path="res://.godot/imported/Teleport.png-d617e8657c0333f37df78357ab45f1e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/SHM_SH2R_Level_content/Textures/Enemies/Flying_robot_sleep.png"
-dest_files=["res://.godot/imported/Flying_robot_sleep.png-c170e60bc203a52a847fa9006c4936d7.ctex"]
+source_file="res://addons/SHM_Level_content/Textures/Objects/Teleport.png"
+dest_files=["res://.godot/imported/Teleport.png-d617e8657c0333f37df78357ab45f1e7.ctex"]
 
 [params]
 

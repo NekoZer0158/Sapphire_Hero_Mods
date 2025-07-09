@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Sapphire Hero Mods"
-config/tags=PackedStringArray("плагины")
+config/version="1.1"
+config/tags=PackedStringArray("plugins")
 run/main_scene="res://addons/sapphire_hero_mods/Scenes/UI/Mods_UI.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
@@ -31,7 +32,7 @@ window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SHM_Dilogy_Level_content/plugin.cfg", "res://addons/SHM_Level_content/plugin.cfg", "res://addons/SHM_SH2R/plugin.cfg", "res://addons/SHM_SH2R_Level_content/plugin.cfg", "res://addons/SHM_SHR/plugin.cfg", "res://addons/SHM_SHR_Level_content/plugin.cfg", "res://addons/SHM_base/plugin.cfg", "res://addons/sapphire_hero_mods/plugin.cfg", "res://addons/shm_sh2r_level_content/plugin.cfg")
+enabled=PackedStringArray("res://addons/shm_sh2r_level_content/plugin.cfg")
 
 [file_customization]
 

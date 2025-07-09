@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkh0f7wahfuj1"]
+
+[ext_resource type="Texture2D" uid="uid://8c45e6h0chgy" path="res://addons/SHM_SH2R_Level_content/Textures/Enemies/Flying/Flying_shield_robot_color.png" id="1_yn2br"]
+
+[node name="Flying_shield_robot_color_blue" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yn2br")
+hframes = 2

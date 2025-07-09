@@ -1,0 +1,12 @@
+Door:
+	can_door_open : bool = true
+Computer:
+	enemy_positions : Array[int] = []:
+		max size = 8
+		Enemy ids: 
+			1,2,3 (SHR & SH2R have different enemies, but the same ids)
+	open_this_door : Door
+	atk : int = 0
+	color_hp_3 : Color = Color.GREEN  (SH2R)
+	color_hp_2 : Color = Color.YELLOW (SH2R)
+	color_hp_1 : Color = Color.RED    (SH2R)

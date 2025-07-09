@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqooy1nsblfw4"]
+
+[ext_resource type="Texture2D" uid="uid://di1imtn8sjbsj" path="res://addons/SHM_Level_content/Textures/Objects/Computer.png" id="1_l5coi"]
+[ext_resource type="Script" uid="uid://bkfiinhkotgvi" path="res://addons/SHM_Level_content/Scripts/Computer.gd" id="1_uk02o"]
+
+[node name="Computer" type="Marker2D"]
+script = ExtResource("1_uk02o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+texture = ExtResource("1_l5coi")

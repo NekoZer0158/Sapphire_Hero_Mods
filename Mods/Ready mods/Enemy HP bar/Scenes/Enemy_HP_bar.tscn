@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://csutkhponh231"]
 
-[ext_resource type="Script" path="res://Mods/Ready mods/Enemy HP bar/Scripts/enemy_hp_bar.gd" id="1_fii0b"]
+[ext_resource type="Script" uid="uid://uwtflinlo43i" path="res://Mods/Ready mods/Enemy HP bar/Scripts/enemy_hp_bar.gd" id="1_fii0b"]
 [ext_resource type="Theme" uid="uid://djycdcen6x8h7" path="res://Mods/Ready mods/Enemy HP bar/Resources/HP_bar.tres" id="1_jhty1"]
 
 [node name="EnemyHpBar" type="Node2D"]
