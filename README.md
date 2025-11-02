@@ -8,7 +8,7 @@ Tools for creating mods for Sapphire Hero Rewritten and Sapphire Hero 2 Rewritte
 ### 1.2
 1) Added Tank, Feurig and Kalt for Sapphire Hero 2 Rewritten
 2) SHM_SH2R_Level_content updated to 1.2
-3) Changed licesnse
+3) Changed license
 ### 1.1
 1) Now addons should be exported into the mod loader and not in the mods (see SHModLoader in Export)
 2) Added mod names
