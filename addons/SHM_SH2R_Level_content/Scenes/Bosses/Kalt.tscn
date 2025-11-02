@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsec3b6hdl0ej"]
+
+[ext_resource type="Script" uid="uid://daww0yjkc7m7o" path="res://addons/SHM_Level_content/Scripts/Boss.gd" id="1_r1f3g"]
+[ext_resource type="Texture2D" uid="uid://br4vktw00hv7" path="res://addons/SHM_SH2R_Level_content/Textures/Bosses/Kalt.png" id="2_r1f3g"]
+
+[node name="Kalt" type="Marker2D"]
+script = ExtResource("1_r1f3g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+texture = ExtResource("2_r1f3g")

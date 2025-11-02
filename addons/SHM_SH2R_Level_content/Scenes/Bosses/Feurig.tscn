@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgb5qn37k11xg"]
+
+[ext_resource type="Script" uid="uid://daww0yjkc7m7o" path="res://addons/SHM_Level_content/Scripts/Boss.gd" id="1_3n2wy"]
+[ext_resource type="Texture2D" uid="uid://cts8q0y4nqgyb" path="res://addons/SHM_SH2R_Level_content/Textures/Bosses/Feurig.png" id="2_3n2wy"]
+
+[node name="Feurig" type="Marker2D"]
+script = ExtResource("1_3n2wy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+texture = ExtResource("2_3n2wy")

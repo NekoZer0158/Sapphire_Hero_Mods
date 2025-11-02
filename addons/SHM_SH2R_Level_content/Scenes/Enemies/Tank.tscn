@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpwjswdk1yeg2"]
+
+[ext_resource type="Texture2D" uid="uid://by76b1joeqqn8" path="res://addons/SHM_SH2R_Level_content/Textures/Enemies/Tank.png" id="1_l2222"]
+
+[node name="Tank" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_l2222")
+offset = Vector2(0, -2.5)
