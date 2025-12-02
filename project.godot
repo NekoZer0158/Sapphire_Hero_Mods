@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Sapphire Hero Mods"
-config/version="1.2"
+config/version="1.3"
 config/tags=PackedStringArray("plugins")
 run/main_scene="res://addons/sapphire_hero_mods/Scenes/UI/Mods_UI.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
@@ -32,7 +32,7 @@ window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/shm_sh2r_level_content/plugin.cfg")
+enabled=PackedStringArray("res://addons/SHM_Characters/plugin.cfg", "res://addons/SHM_Dilogy_Level_content/plugin.cfg", "res://addons/SHM_Level_content/plugin.cfg", "res://addons/SHM_SH2R/plugin.cfg", "res://addons/SHM_SH2R_Level_content/plugin.cfg", "res://addons/SHM_SHR/plugin.cfg", "res://addons/SHM_SHR_Level_content/plugin.cfg", "res://addons/SHM_base/plugin.cfg", "res://addons/shm_sh2r_level_content/plugin.cfg")
 
 [file_customization]
 
@@ -49,6 +49,7 @@ folder_colors={
 "res://Mods/Ready mods/Enemy HP bar/Textures/": "blue",
 "res://Mods/Ready mods/Every enemy soldier is BMR/BMR/": "orange",
 "res://addons/": "pink",
+"res://addons/SHM_Characters/Scripts/": "yellow",
 "res://addons/SHM_Dilogy_Level_content/Scenes/": "red",
 "res://addons/SHM_Dilogy_Level_content/Scripts/": "yellow",
 "res://addons/SHM_Dilogy_Level_content/Textures/": "blue",

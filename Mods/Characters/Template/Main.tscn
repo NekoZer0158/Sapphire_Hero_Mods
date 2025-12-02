@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=3 uid="uid://ccbt2o5qog8wg"]
+
+[ext_resource type="Script" uid="uid://de6y8vg0nredl" path="res://addons/SHM_Characters/Scripts/Player_mod.gd" id="1_e73tt"]
+[ext_resource type="Texture2D" uid="uid://bmduydnxangun" path="res://Mods/Characters/Template/Textures/Body.png" id="2_r2fbk"]
+[ext_resource type="Shader" uid="uid://dxpdcm6s3pfvn" path="res://Mods/Characters/Template/Shaders/color_change.gdshader" id="2_vdgjy"]
+[ext_resource type="Texture2D" uid="uid://dt4fr2qvkxc57" path="res://Mods/Characters/Template/Textures/Head.png" id="3_6o7p2"]
+[ext_resource type="Texture2D" uid="uid://bftokoxwnilge" path="res://Mods/Characters/Template/Textures/Arm.png" id="4_o00wf"]
+[ext_resource type="Texture2D" uid="uid://ca8c1h1v1jkg5" path="res://Mods/Characters/Template/Textures/Hand.png" id="5_3mixm"]
+[ext_resource type="Texture2D" uid="uid://cdjnhbkcix4i7" path="res://Mods/Characters/Template/Textures/Arm_left.png" id="6_o8qqj"]
+[ext_resource type="Texture2D" uid="uid://y4ot7b0hg6d6" path="res://Mods/Characters/Template/Textures/Hand_shoot.png" id="7_miu28"]
+[ext_resource type="Texture2D" uid="uid://bfq7be6g3qb62" path="res://Mods/Characters/Template/Textures/Leg_up.png" id="8_u04xf"]
+[ext_resource type="Texture2D" uid="uid://cib4egk4yd3in" path="res://Mods/Characters/Template/Textures/Leg_down.png" id="9_w8kk5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdgjy"]
+size = Vector2(12, 35.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m1s2f"]
+shader = ExtResource("2_vdgjy")
+shader_parameter/color = Color(0.152941, 0.4, 0.8, 1)
+shader_parameter/change_only_with_this_color = Color(0.152941, 0.4, 0.8, 1)
+shader_parameter/change_this_color = Color(0.623529, 0.709804, 0.780392, 1)
+shader_parameter/change_to_this = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("markers", "body_sprite", "death_effect_marker", "collision_shape_2d")]
+script = ExtResource("1_e73tt")
+speed = 350.0
+jump_velocity = -900.0
+amount_of_jumps = 2
+reload_time = 0.4
+markers = [NodePath("Marker2D_projectile")]
+body_sprite = NodePath("Body")
+death_effect_marker = NodePath("Marker2D_death_effect")
+ammo_regeneration = true
+time_for_ammo_regeneration = 0.75
+immortality_frames = true
+can_change_color = true
+can_change_weapon = true
+collision_shape_2d = NodePath("CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -2
+position = Vector2(1, -17.75)
+shape = SubResource("RectangleShape2D_vdgjy")
+
+[node name="Body" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_m1s2f")
+position = Vector2(0, -20)
+texture = ExtResource("2_r2fbk")
+
+[node name="Head" type="Sprite2D" parent="Body"]
+use_parent_material = true
+position = Vector2(-1, -13)
+texture = ExtResource("3_6o7p2")
+
+[node name="Arm_right" type="Sprite2D" parent="Body"]
+z_index = 1
+use_parent_material = true
+position = Vector2(-5, -4)
+texture = ExtResource("4_o00wf")
+offset = Vector2(0, 6)
+
+[node name="Hand" type="Sprite2D" parent="Body/Arm_right"]
+use_parent_material = true
+position = Vector2(0, 6)
+texture = ExtResource("5_3mixm")
+offset = Vector2(0, 1)
+
+[node name="Arm_left" type="Sprite2D" parent="Body"]
+z_index = -2
+use_parent_material = true
+position = Vector2(6, -4)
+texture = ExtResource("6_o8qqj")
+offset = Vector2(0, 6)
+
+[node name="Hand_shoot" type="Sprite2D" parent="Body/Arm_left"]
+use_parent_material = true
+position = Vector2(0, 6)
+texture = ExtResource("7_miu28")
+offset = Vector2(0, 1)
+
+[node name="Leg_right" type="Sprite2D" parent="Body"]
+z_index = -1
+use_parent_material = true
+position = Vector2(-2, 7)
+texture = ExtResource("8_u04xf")
+offset = Vector2(0, 3)
+
+[node name="Leg_down" type="Sprite2D" parent="Body/Leg_right"]
+use_parent_material = true
+position = Vector2(0, 6)
+texture = ExtResource("9_w8kk5")
+offset = Vector2(0, 3)
+
+[node name="Leg_left" type="Sprite2D" parent="Body"]
+z_index = -2
+use_parent_material = true
+position = Vector2(4, 7)
+texture = ExtResource("8_u04xf")
+offset = Vector2(0, 3)
+
+[node name="Leg_down" type="Sprite2D" parent="Body/Leg_left"]
+use_parent_material = true
+position = Vector2(0, 6)
+texture = ExtResource("9_w8kk5")
+offset = Vector2(0, 3)
+
+[node name="Marker2D_death_effect" type="Marker2D" parent="."]
+position = Vector2(1, -21)
+
+[node name="Marker2D_projectile" type="Marker2D" parent="."]
+position = Vector2(19.046, -23.699)

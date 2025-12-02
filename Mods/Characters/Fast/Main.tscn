@@ -1,0 +1,148 @@
+[gd_scene load_steps=15 format=3 uid="uid://bclmxueotvt6i"]
+
+[ext_resource type="Script" uid="uid://de6y8vg0nredl" path="res://addons/SHM_Characters/Scripts/Player_mod.gd" id="1_8y8by"]
+[ext_resource type="Shader" uid="uid://dxpdcm6s3pfvn" path="res://Mods/Characters/Template/Shaders/color_change.gdshader" id="2_vyjaq"]
+[ext_resource type="Texture2D" uid="uid://bo6fcemgyruof" path="res://Mods/Characters/Fast/Textures/Body.png" id="3_8y8by"]
+[ext_resource type="Texture2D" uid="uid://cwmgjp6fcpc6s" path="res://Mods/Characters/Fast/Textures/Head.png" id="4_8y8by"]
+[ext_resource type="Texture2D" uid="uid://by7or433f78xx" path="res://Mods/Characters/Fast/Textures/Arm.png" id="5_8y8by"]
+[ext_resource type="Texture2D" uid="uid://dgai2w216csr5" path="res://Mods/Characters/Fast/Textures/Hand.png" id="6_8y8by"]
+[ext_resource type="Texture2D" uid="uid://dljait51jtxi8" path="res://Mods/Characters/Fast/Textures/Arm_left.png" id="7_8y8by"]
+[ext_resource type="Texture2D" uid="uid://d34828easmx61" path="res://Mods/Characters/Fast/Textures/Hand_shoot.png" id="8_8y8by"]
+[ext_resource type="Texture2D" uid="uid://c5iypknpyy1rj" path="res://Mods/Characters/Fast/Textures/Leg_up.png" id="9_vyjaq"]
+[ext_resource type="Texture2D" uid="uid://cr81as73uu6c1" path="res://Mods/Characters/Fast/Textures/Leg_down.png" id="10_ge7u0"]
+[ext_resource type="PackedScene" uid="uid://bfpjqx7o7mes" path="res://Mods/Libraries/Teleport_library/Scenes/Teleport_UI.tscn" id="11_ge7u0"]
+[ext_resource type="Script" uid="uid://pdb7u40drw1m" path="res://Mods/Characters/Fast/Scripts/Speed_change.gd" id="14_oq7cf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdgjy"]
+size = Vector2(12, 35.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8y8by"]
+shader = ExtResource("2_vyjaq")
+shader_parameter/color = Color(0.901961, 0.588235, 0.278431, 1)
+shader_parameter/change_only_with_this_color = Color(0.901961, 0.588235, 0.278431, 1)
+shader_parameter/change_this_color = Color(0.623529, 0.709804, 0.780392, 1)
+shader_parameter/change_to_this = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("markers", "body_sprite", "death_effect_marker", "collision_shape_2d", "player_UI_other_nodes")]
+script = ExtResource("1_8y8by")
+hp = 9
+def = 1
+speed = 1000.0
+jump_velocity = -1050.0
+amount_of_jumps = 2
+reload_time = 0.2
+markers = [NodePath("Marker2D_projectile")]
+body_sprite = NodePath("Body")
+death_effect_marker = NodePath("Marker2D_death_effect")
+default_color = Color(0.901961, 0.588235, 0.278431, 1)
+immortality_frames = true
+can_change_color = true
+can_change_weapon = true
+collision_shape_2d = NodePath("CollisionShape2D")
+player_UI_other_nodes = {
+"speed": NodePath("Label_speed"),
+"teleport": NodePath("TextureProgressBar")
+}
+animation_speed_scale = 2.0
+active_color = Color(0.9, 0.5895, 0.279, 1)
+progress_bar_HP_color = Color(1, 0.64, 0.28, 1)
+label_shadow_color = Color(0.7, 0.434, 0.168, 1)
+progress_bar_bg_color = Color(1, 0.615, 0.23, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -2
+position = Vector2(1, -17.75)
+shape = SubResource("RectangleShape2D_vdgjy")
+
+[node name="Body" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_8y8by")
+position = Vector2(0, -20)
+texture = ExtResource("3_8y8by")
+
+[node name="Head" type="Sprite2D" parent="Body"]
+use_parent_material = true
+position = Vector2(-1, -13)
+texture = ExtResource("4_8y8by")
+
+[node name="Arm_right" type="Sprite2D" parent="Body"]
+z_index = 1
+use_parent_material = true
+position = Vector2(-5, -4)
+texture = ExtResource("5_8y8by")
+offset = Vector2(0, 6)
+
+[node name="Hand" type="Sprite2D" parent="Body/Arm_right"]
+use_parent_material = true
+position = Vector2(0, 6)
+texture = ExtResource("6_8y8by")
+offset = Vector2(0, 1)
+
+[node name="Arm_left" type="Sprite2D" parent="Body"]
+z_index = -2
+use_parent_material = true
+position = Vector2(6, -4)
+texture = ExtResource("7_8y8by")
+offset = Vector2(0, 6)
+
+[node name="Hand_shoot" type="Sprite2D" parent="Body/Arm_left"]
+use_parent_material = true
+position = Vector2(0, 6)
+texture = ExtResource("8_8y8by")
+offset = Vector2(0, 1)
+
+[node name="Leg_right" type="Sprite2D" parent="Body"]
+z_index = -1
+use_parent_material = true
+position = Vector2(-2, 7)
+texture = ExtResource("9_vyjaq")
+offset = Vector2(0, 3)
+
+[node name="Leg_down" type="Sprite2D" parent="Body/Leg_right"]
+use_parent_material = true
+position = Vector2(0, 6)
+texture = ExtResource("10_ge7u0")
+offset = Vector2(0, 3)
+
+[node name="Leg_left" type="Sprite2D" parent="Body"]
+z_index = -2
+use_parent_material = true
+position = Vector2(4, 7)
+texture = ExtResource("9_vyjaq")
+offset = Vector2(0, 3)
+
+[node name="Leg_down" type="Sprite2D" parent="Body/Leg_left"]
+use_parent_material = true
+position = Vector2(0, 6)
+texture = ExtResource("10_ge7u0")
+offset = Vector2(0, 3)
+
+[node name="Marker2D_death_effect" type="Marker2D" parent="."]
+position = Vector2(1, -21)
+
+[node name="Marker2D_projectile" type="Marker2D" parent="."]
+position = Vector2(19.046, -23.699)
+
+[node name="TextureProgressBar" parent="." node_paths=PackedStringArray("timer_teleport") instance=ExtResource("11_ge7u0")]
+timer_teleport = NodePath("Timer_teleport")
+
+[node name="Timer_teleport" type="Timer" parent="TextureProgressBar"]
+wait_time = 0.25
+
+[node name="Label_speed" type="RichTextLabel" parent="."]
+offset_left = 720.0
+offset_top = 8.0
+offset_right = 960.0
+offset_bottom = 72.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "1 2 3 4"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("14_oq7cf")
+speed_mode_1 = 750
+speed_mode_2 = 1000
+speed_mode_3 = 1500
+speed_mode_4 = 2500
+
+[connection signal="timeout" from="TextureProgressBar/Timer_teleport" to="TextureProgressBar" method="_on_timer_teleport_timeout"]

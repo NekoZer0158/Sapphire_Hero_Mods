@@ -18,6 +18,7 @@ var boss_name : String
 var boss_music : AudioStream
 
 const MODS : int = 8
+const LEVELS : int = 2
 
 func _restart_a_level() -> void:
 	for i in get_tree().get_nodes_in_group("Projectile"):
@@ -36,7 +37,7 @@ func _back_to_menu() -> void:
 	main_menu.cur_main_menu_option = MODS
 	main_menu.set_color_for_cur_option(MODS)
 	main_menu.activate_option(MODS)
-	main_menu.mods_menu.tab_container.current_tab = clamp(main_menu.mods_menu.tab_container.current_tab+1,0,1)
+	main_menu.mods_menu.tab_container.current_tab = LEVELS
 	main_menu.mods_menu.reset_current_mod_index()
 	queue_free()
 

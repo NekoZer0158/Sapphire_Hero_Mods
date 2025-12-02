@@ -1,0 +1,2 @@
+keys,ru,en
+Test character,Тестовый персонаж,Test character

@@ -1,0 +1,2 @@
+keys,ru,en
+Fast character,Быстрый персонаж,Fast character

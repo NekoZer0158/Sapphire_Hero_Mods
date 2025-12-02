@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctxbw1o1tflcw"]
+
+[ext_resource type="Script" uid="uid://dk0hgo304eu3f" path="res://Mods/Ready mods/Teleport for everyone/Main.gd" id="1_1eml0"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_1eml0")

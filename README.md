@@ -1,10 +1,15 @@
-# Sapphire Hero Mods (version 1.2)
+# Sapphire Hero Mods (version 1.3)
 Tools for creating mods for Sapphire Hero Rewritten and Sapphire Hero 2 Rewritten (with templates and example mods)
 ## Getting started
 1) Install Godot from Steam or official site (https://godotengine.org/)
 2) Import this project to Godot
 3) Check folders in 'addons', you will see every available function here and in 'Mods' folder you can find examples and template for your own mod
 ## Changelog
+### 1.3
+1) Added 2 character and 1 ready mods for Sapphire Hero 2 Rewritten
+2) Added 2 libraries for Sapphire Hero 2 Rewritten
+3) Added SHM_Characters to add new characters to Sapphire Hero 2 Rewritten (and later games)
+4) Updated SHM_base to 1.2
 ### 1.2
 1) Added Tank, Feurig and Kalt for Sapphire Hero 2 Rewritten
 2) SHM_SH2R_Level_content updated to 1.2

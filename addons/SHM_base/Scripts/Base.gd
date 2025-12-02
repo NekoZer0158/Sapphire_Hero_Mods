@@ -3,9 +3,19 @@ extends RefCounted
 
 ## For variables look up "Characters2D.txt" in folder "Text files"
 static func get_player(tree:SceneTree) -> CharacterBody2D:
-	var player := tree.get_nodes_in_group("Player")
-	if player.size() == 1:
-		return player.back()
+	var players := tree.get_nodes_in_group("Player")
+	if players.size() >= 1:
+		return players.back()
+	push_error("No player was found")
+	return null
+
+## Player UI
+## active_color : Color - color used for selected weapon
+## mod_nodes_and_resources : Dictionary - add here resource or any node you add as child to player_UI
+static func get_player_UI(tree:SceneTree) -> Control:
+	var players := tree.get_nodes_in_group("Player")
+	if players.size() >= 1:
+		return players.back().get_parent().player_UI
 	push_error("No player was found")
 	return null
 
@@ -27,13 +37,22 @@ static func get_level(tree:SceneTree) -> Node2D:
 	push_error("No level was found")
 	return null
 
-## Returns a dictionary
-## name: game name
-## part: the part of the game (from 1 to 4) 
-## version: game version
+## Returns a dictionary[br]
+## name: game name [br]
+## part: the part of the game (from 1 to 4)  [br]
+## version: game version [br]
 ## minigame: minigame type from the game (for example,"planes" from SHR and SH2R)
 static func get_game_info(tree:SceneTree) -> Dictionary:
 	return tree.get_nodes_in_group("GlobalSapphire").back().get_game_info()
+
+## Important functions:[br]
+## add_projectile_to_database(projectile_scene_path:String) -> void: - use to add a projectile to a projectile database [br]
+## play_music(cur_music:AudioStream) -> void - plays cur_music [br]
+## continue_music() -> void - continues paused music [br]
+## stop_music() -> void - stops the music  [br]
+## remove_music() -> void - removes music from the level
+static func get_main_singleton(tree:SceneTree) -> Node:
+	return tree.get_nodes_in_group("GlobalSapphire").back()
 
 ## For variables look up "Objects.txt" in folder "Text files"
 static func get_all_computers(tree:SceneTree) -> Array[Node]:

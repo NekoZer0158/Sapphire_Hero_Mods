@@ -12,6 +12,7 @@ Robot_body
 			infinite_ammo : bool = false       
 			has_death_effect : bool = true
 			mirror_sprite : bool = true (if false, character will not be mirrored when moving in the opposite direction)
+			mod_nodes_and_resources : Dictionary - add here resource any node you add as child to body
 	Important functions:
 		hit(dmg : int) -> void
 		death() -> void

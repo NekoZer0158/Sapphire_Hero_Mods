@@ -1,0 +1,2 @@
+Fast character
+This is a fast character. Press G to teleport. Requires Teleport_library
