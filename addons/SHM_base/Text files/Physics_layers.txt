@@ -14,3 +14,4 @@
 14 - Energy_box           (SH2R)
 15 - Final_boss_only      (SH2R)
 16 - Door_stuck           (SH2R)
+17 - Doors                (SH2R)

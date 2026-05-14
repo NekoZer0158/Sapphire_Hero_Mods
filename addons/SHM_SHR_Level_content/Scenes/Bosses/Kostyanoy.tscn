@@ -5,6 +5,7 @@
 
 [node name="Kostyanoy" type="Marker2D"]
 script = ExtResource("1_4qtil")
+metadata/_custom_type_script = "uid://daww0yjkc7m7o"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -24)
