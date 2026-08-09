@@ -1,10 +1,12 @@
-# Sapphire Hero Mods (version 1.4)
+# Sapphire Hero Mods (version 1.5)
 Tools for creating mods for Sapphire Hero Rewritten and Sapphire Hero 2 Rewritten (with templates and example mods)
 ## Getting started
 1) Install Godot from Steam or official site (https://godotengine.org/)
 2) Import this project to Godot
 3) Check folders in 'addons', you will see every available function here and in 'Mods' folder you can find examples and a template for your own mod
 ## Changelog
+### 1.5
+1) Fix Fast character that used shader from Template character
 ### 1.4
 1) Add new boss for SHR - Ledyanoy
 2) Unknown weapon can be replaced with Voronoy weapon in SHR
